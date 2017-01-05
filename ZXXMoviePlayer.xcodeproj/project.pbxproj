@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36DF1B090C0B17DEE38E8E64 /* libPods-ZXXMoviePlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 061EEDE39FE91E861FE4E5F2 /* libPods-ZXXMoviePlayerUITests.a */; };
+		3D3568721E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */; };
+		3D705F571E1CCEF20076D738 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F561E1CCEF20076D738 /* main.m */; };
+		3D705F5A1E1CCEF20076D738 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F591E1CCEF20076D738 /* AppDelegate.m */; };
+		3D705F5D1E1CCEF20076D738 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F5C1E1CCEF20076D738 /* ViewController.m */; };
+		3D705F601E1CCEF20076D738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D705F5E1E1CCEF20076D738 /* Main.storyboard */; };
+		3D705F621E1CCEF20076D738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D705F611E1CCEF20076D738 /* Assets.xcassets */; };
+		3D705F651E1CCEF20076D738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D705F631E1CCEF20076D738 /* LaunchScreen.storyboard */; };
+		3D705F701E1CCEF20076D738 /* ZXXMoviePlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F6F1E1CCEF20076D738 /* ZXXMoviePlayerTests.m */; };
+		3D705F7B1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F7A1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m */; };
+		3DCF4C481E1CD183003659EC /* ZXXPlayerMachineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */; };
+		3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */; };
+		4A81F5D8832DEC63739F9B1D /* libPods-ZXXMoviePlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */; };
+		DD754F4F36DD9530019B6B6F /* libPods-ZXXMoviePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C6922B3FEC83F732209A6C /* libPods-ZXXMoviePlayer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D705F6C1E1CCEF20076D738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D705F4A1E1CCEF20076D738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D705F511E1CCEF20076D738;
+			remoteInfo = ZXXMoviePlayer;
+		};
+		3D705F771E1CCEF20076D738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D705F4A1E1CCEF20076D738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D705F511E1CCEF20076D738;
+			remoteInfo = ZXXMoviePlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		061EEDE39FE91E861FE4E5F2 /* libPods-ZXXMoviePlayerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D09C49D1F0E6BB60FFFC7D0 /* Pods-ZXXMoviePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayer/Pods-ZXXMoviePlayer.release.xcconfig"; sourceTree = "<group>"; };
+		3D35686F1E1DE52B008411B6 /* ZXXControlKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXXControlKey.h; sourceTree = "<group>"; };
+		3D3568701E1DE95B008411B6 /* ZXXPlayerPlayControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayerPlayControlButton.h; sourceTree = "<group>"; };
+		3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayerPlayControlButton.m; sourceTree = "<group>"; };
+		3D705F521E1CCEF20076D738 /* ZXXMoviePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXXMoviePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D705F561E1CCEF20076D738 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D705F581E1CCEF20076D738 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D705F591E1CCEF20076D738 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D705F5B1E1CCEF20076D738 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3D705F5C1E1CCEF20076D738 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3D705F5F1E1CCEF20076D738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D705F611E1CCEF20076D738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D705F641E1CCEF20076D738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D705F661E1CCEF20076D738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D705F6B1E1CCEF20076D738 /* ZXXMoviePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXXMoviePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D705F6F1E1CCEF20076D738 /* ZXXMoviePlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXXMoviePlayerTests.m; sourceTree = "<group>"; };
+		3D705F711E1CCEF20076D738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D705F761E1CCEF20076D738 /* ZXXMoviePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXXMoviePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D705F7A1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXXMoviePlayerUITests.m; sourceTree = "<group>"; };
+		3D705F7C1E1CCEF20076D738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DCF4C461E1CD183003659EC /* ZXXPlayerMachineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayerMachineView.h; sourceTree = "<group>"; };
+		3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayerMachineView.m; sourceTree = "<group>"; };
+		3DCF4C491E1D0801003659EC /* ZXXPlayInterFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayInterFaceView.h; sourceTree = "<group>"; };
+		3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayInterFaceView.m; sourceTree = "<group>"; };
+		6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C6922B3FEC83F732209A6C /* libPods-ZXXMoviePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13F6481E39DCA68696759FD /* Pods-ZXXMoviePlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayerTests/Pods-ZXXMoviePlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4F34F7CD6AB5AA15472C2D0 /* Pods-ZXXMoviePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayer/Pods-ZXXMoviePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		EC25016561AED5864849ECF2 /* Pods-ZXXMoviePlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayerTests/Pods-ZXXMoviePlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDC1B7890CBFB20F8FE53677 /* Pods-ZXXMoviePlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayerUITests/Pods-ZXXMoviePlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1EB11483281678357C859BD /* Pods-ZXXMoviePlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayerUITests/Pods-ZXXMoviePlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D705F4F1E1CCEF20076D738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD754F4F36DD9530019B6B6F /* libPods-ZXXMoviePlayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F681E1CCEF20076D738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A81F5D8832DEC63739F9B1D /* libPods-ZXXMoviePlayerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F731E1CCEF20076D738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DF1B090C0B17DEE38E8E64 /* libPods-ZXXMoviePlayerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D705F491E1CCEF20076D738 = {
+			isa = PBXGroup;
+			children = (
+				3D705F541E1CCEF20076D738 /* ZXXMoviePlayer */,
+				3D705F6E1E1CCEF20076D738 /* ZXXMoviePlayerTests */,
+				3D705F791E1CCEF20076D738 /* ZXXMoviePlayerUITests */,
+				3D705F531E1CCEF20076D738 /* Products */,
+				820BBFB03731DEC36B156446 /* Pods */,
+				D2866940B05F6A2003DAA688 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D705F531E1CCEF20076D738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D705F521E1CCEF20076D738 /* ZXXMoviePlayer.app */,
+				3D705F6B1E1CCEF20076D738 /* ZXXMoviePlayerTests.xctest */,
+				3D705F761E1CCEF20076D738 /* ZXXMoviePlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D705F541E1CCEF20076D738 /* ZXXMoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3D705F881E1CCF1B0076D738 /* PlayerViews */,
+				3D705F581E1CCEF20076D738 /* AppDelegate.h */,
+				3D705F591E1CCEF20076D738 /* AppDelegate.m */,
+				3D705F5B1E1CCEF20076D738 /* ViewController.h */,
+				3D705F5C1E1CCEF20076D738 /* ViewController.m */,
+				3D705F5E1E1CCEF20076D738 /* Main.storyboard */,
+				3D705F611E1CCEF20076D738 /* Assets.xcassets */,
+				3D705F631E1CCEF20076D738 /* LaunchScreen.storyboard */,
+				3D705F661E1CCEF20076D738 /* Info.plist */,
+				3D705F551E1CCEF20076D738 /* Supporting Files */,
+			);
+			path = ZXXMoviePlayer;
+			sourceTree = "<group>";
+		};
+		3D705F551E1CCEF20076D738 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D705F561E1CCEF20076D738 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D705F6E1E1CCEF20076D738 /* ZXXMoviePlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D705F6F1E1CCEF20076D738 /* ZXXMoviePlayerTests.m */,
+				3D705F711E1CCEF20076D738 /* Info.plist */,
+			);
+			path = ZXXMoviePlayerTests;
+			sourceTree = "<group>";
+		};
+		3D705F791E1CCEF20076D738 /* ZXXMoviePlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D705F7A1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m */,
+				3D705F7C1E1CCEF20076D738 /* Info.plist */,
+			);
+			path = ZXXMoviePlayerUITests;
+			sourceTree = "<group>";
+		};
+		3D705F881E1CCF1B0076D738 /* PlayerViews */ = {
+			isa = PBXGroup;
+			children = (
+				3DCF4C4C1E1D0822003659EC /* ZXXPlayControls */,
+				3DCF4C461E1CD183003659EC /* ZXXPlayerMachineView.h */,
+				3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */,
+				3DCF4C491E1D0801003659EC /* ZXXPlayInterFaceView.h */,
+				3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */,
+			);
+			path = PlayerViews;
+			sourceTree = "<group>";
+		};
+		3DCF4C4C1E1D0822003659EC /* ZXXPlayControls */ = {
+			isa = PBXGroup;
+			children = (
+				3D35686F1E1DE52B008411B6 /* ZXXControlKey.h */,
+				3D3568701E1DE95B008411B6 /* ZXXPlayerPlayControlButton.h */,
+				3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */,
+			);
+			path = ZXXPlayControls;
+			sourceTree = "<group>";
+		};
+		820BBFB03731DEC36B156446 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4F34F7CD6AB5AA15472C2D0 /* Pods-ZXXMoviePlayer.debug.xcconfig */,
+				3D09C49D1F0E6BB60FFFC7D0 /* Pods-ZXXMoviePlayer.release.xcconfig */,
+				E13F6481E39DCA68696759FD /* Pods-ZXXMoviePlayerTests.debug.xcconfig */,
+				EC25016561AED5864849ECF2 /* Pods-ZXXMoviePlayerTests.release.xcconfig */,
+				EDC1B7890CBFB20F8FE53677 /* Pods-ZXXMoviePlayerUITests.debug.xcconfig */,
+				F1EB11483281678357C859BD /* Pods-ZXXMoviePlayerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2866940B05F6A2003DAA688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99C6922B3FEC83F732209A6C /* libPods-ZXXMoviePlayer.a */,
+				6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */,
+				061EEDE39FE91E861FE4E5F2 /* libPods-ZXXMoviePlayerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D705F511E1CCEF20076D738 /* ZXXMoviePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D705F7F1E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayer" */;
+			buildPhases = (
+				A70143AF531C394575B18EE0 /* [CP] Check Pods Manifest.lock */,
+				3D705F4E1E1CCEF20076D738 /* Sources */,
+				3D705F4F1E1CCEF20076D738 /* Frameworks */,
+				3D705F501E1CCEF20076D738 /* Resources */,
+				95DAB4F46598B0C32416D149 /* [CP] Embed Pods Frameworks */,
+				7A288CA77B97C778D06C0282 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXXMoviePlayer;
+			productName = ZXXMoviePlayer;
+			productReference = 3D705F521E1CCEF20076D738 /* ZXXMoviePlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D705F6A1E1CCEF20076D738 /* ZXXMoviePlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D705F821E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayerTests" */;
+			buildPhases = (
+				F16A05FD5452B96D7248D1D1 /* [CP] Check Pods Manifest.lock */,
+				3D705F671E1CCEF20076D738 /* Sources */,
+				3D705F681E1CCEF20076D738 /* Frameworks */,
+				3D705F691E1CCEF20076D738 /* Resources */,
+				8012DF99E014C196745253E1 /* [CP] Embed Pods Frameworks */,
+				A02615BB36F46626B0C9DC3D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D705F6D1E1CCEF20076D738 /* PBXTargetDependency */,
+			);
+			name = ZXXMoviePlayerTests;
+			productName = ZXXMoviePlayerTests;
+			productReference = 3D705F6B1E1CCEF20076D738 /* ZXXMoviePlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D705F751E1CCEF20076D738 /* ZXXMoviePlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D705F851E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayerUITests" */;
+			buildPhases = (
+				17C5CB1192F2657248285D95 /* [CP] Check Pods Manifest.lock */,
+				3D705F721E1CCEF20076D738 /* Sources */,
+				3D705F731E1CCEF20076D738 /* Frameworks */,
+				3D705F741E1CCEF20076D738 /* Resources */,
+				E2C6EE5247DC44FD8046235C /* [CP] Embed Pods Frameworks */,
+				9762D918A6ED123F871EC80D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D705F781E1CCEF20076D738 /* PBXTargetDependency */,
+			);
+			name = ZXXMoviePlayerUITests;
+			productName = ZXXMoviePlayerUITests;
+			productReference = 3D705F761E1CCEF20076D738 /* ZXXMoviePlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D705F4A1E1CCEF20076D738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Zhangx;
+				TargetAttributes = {
+					3D705F511E1CCEF20076D738 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7W2EM9BNZ3;
+						ProvisioningStyle = Automatic;
+					};
+					3D705F6A1E1CCEF20076D738 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7W2EM9BNZ3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D705F511E1CCEF20076D738;
+					};
+					3D705F751E1CCEF20076D738 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7W2EM9BNZ3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D705F511E1CCEF20076D738;
+					};
+				};
+			};
+			buildConfigurationList = 3D705F4D1E1CCEF20076D738 /* Build configuration list for PBXProject "ZXXMoviePlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D705F491E1CCEF20076D738;
+			productRefGroup = 3D705F531E1CCEF20076D738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D705F511E1CCEF20076D738 /* ZXXMoviePlayer */,
+				3D705F6A1E1CCEF20076D738 /* ZXXMoviePlayerTests */,
+				3D705F751E1CCEF20076D738 /* ZXXMoviePlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D705F501E1CCEF20076D738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D705F651E1CCEF20076D738 /* LaunchScreen.storyboard in Resources */,
+				3D705F621E1CCEF20076D738 /* Assets.xcassets in Resources */,
+				3D705F601E1CCEF20076D738 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F691E1CCEF20076D738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F741E1CCEF20076D738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17C5CB1192F2657248285D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A288CA77B97C778D06C0282 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayer/Pods-ZXXMoviePlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8012DF99E014C196745253E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayerTests/Pods-ZXXMoviePlayerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95DAB4F46598B0C32416D149 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayer/Pods-ZXXMoviePlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9762D918A6ED123F871EC80D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayerUITests/Pods-ZXXMoviePlayerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A02615BB36F46626B0C9DC3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayerTests/Pods-ZXXMoviePlayerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A70143AF531C394575B18EE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2C6EE5247DC44FD8046235C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXXMoviePlayerUITests/Pods-ZXXMoviePlayerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16A05FD5452B96D7248D1D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D705F4E1E1CCEF20076D738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DCF4C481E1CD183003659EC /* ZXXPlayerMachineView.m in Sources */,
+				3D705F5D1E1CCEF20076D738 /* ViewController.m in Sources */,
+				3D705F5A1E1CCEF20076D738 /* AppDelegate.m in Sources */,
+				3D3568721E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m in Sources */,
+				3D705F571E1CCEF20076D738 /* main.m in Sources */,
+				3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F671E1CCEF20076D738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D705F701E1CCEF20076D738 /* ZXXMoviePlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D705F721E1CCEF20076D738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D705F7B1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D705F6D1E1CCEF20076D738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D705F511E1CCEF20076D738 /* ZXXMoviePlayer */;
+			targetProxy = 3D705F6C1E1CCEF20076D738 /* PBXContainerItemProxy */;
+		};
+		3D705F781E1CCEF20076D738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D705F511E1CCEF20076D738 /* ZXXMoviePlayer */;
+			targetProxy = 3D705F771E1CCEF20076D738 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D705F5E1E1CCEF20076D738 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D705F5F1E1CCEF20076D738 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D705F631E1CCEF20076D738 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D705F641E1CCEF20076D738 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D705F7D1E1CCEF20076D738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D705F7E1E1CCEF20076D738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D705F801E1CCEF20076D738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F34F7CD6AB5AA15472C2D0 /* Pods-ZXXMoviePlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D705F811E1CCEF20076D738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D09C49D1F0E6BB60FFFC7D0 /* Pods-ZXXMoviePlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D705F831E1CCEF20076D738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13F6481E39DCA68696759FD /* Pods-ZXXMoviePlayerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZXXMoviePlayer.app/ZXXMoviePlayer";
+			};
+			name = Debug;
+		};
+		3D705F841E1CCEF20076D738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC25016561AED5864849ECF2 /* Pods-ZXXMoviePlayerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZXXMoviePlayer.app/ZXXMoviePlayer";
+			};
+			name = Release;
+		};
+		3D705F861E1CCEF20076D738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC1B7890CBFB20F8FE53677 /* Pods-ZXXMoviePlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZXXMoviePlayer;
+			};
+			name = Debug;
+		};
+		3D705F871E1CCEF20076D738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EB11483281678357C859BD /* Pods-ZXXMoviePlayerUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7W2EM9BNZ3;
+				INFOPLIST_FILE = ZXXMoviePlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micoo.ZXXMoviePlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZXXMoviePlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D705F4D1E1CCEF20076D738 /* Build configuration list for PBXProject "ZXXMoviePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D705F7D1E1CCEF20076D738 /* Debug */,
+				3D705F7E1E1CCEF20076D738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D705F7F1E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D705F801E1CCEF20076D738 /* Debug */,
+				3D705F811E1CCEF20076D738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D705F821E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D705F831E1CCEF20076D738 /* Debug */,
+				3D705F841E1CCEF20076D738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D705F851E1CCEF20076D738 /* Build configuration list for PBXNativeTarget "ZXXMoviePlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D705F861E1CCEF20076D738 /* Debug */,
+				3D705F871E1CCEF20076D738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D705F4A1E1CCEF20076D738 /* Project object */;
+}
