@@ -19,7 +19,7 @@
 /**
  * 控制播放器 开始暂停的按钮
  */
-@interface ZXXPlayerPlayControlButton : UIButton
+@interface ZXXPlayerPlayControlButton : UIView
 
 /**
  * 播放按钮
@@ -29,15 +29,19 @@
  * 暂停按钮
  */
 @property (nonatomic, strong)UIImage *pauseIcon;
+/**
+ * 按钮的选中状态
+ */
+@property (nonatomic, assign, getter=isSelected)BOOL selected;
 
 /**
  * 是否是 播放状态(此时的按钮是暂停按钮), YES 播放中, NO 暂停
  */
-@property (nonatomic, assign)BOOL isPlay;
+@property (nonatomic, assign, readonly)BOOL isPlay;
 @property (nonatomic, weak)id<ZXXPlayerPlayControlButtonDelegate> delegate;
 
 
-
+- (void)setupButton;
 /**
  * 改变按钮状态的方法, 实现该方法 可以让player 改变当前按钮的状态
 

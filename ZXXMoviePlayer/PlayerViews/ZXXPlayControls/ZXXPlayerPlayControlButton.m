@@ -7,6 +7,18 @@
 //
 
 #import "ZXXPlayerPlayControlButton.h"
+#import <Masonry.h>
+
+@interface ZXXPlayerPlayControlButton ()
+
+@property (nonatomic, assign, readwrite)BOOL isPlay;
+
+/**
+ * button的背景图
+ */
+@property (nonatomic, weak)UIImageView *bgImageView;
+
+@end
 
 @implementation ZXXPlayerPlayControlButton
 
@@ -38,17 +50,27 @@
     return self;
 }
 
+
 - (void)setupButton
 {
-    [self addTarget:self action:@selector(touchPlayButton:) forControlEvents:UIControlEventTouchUpInside];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchPlayButton:)];
+    [self addGestureRecognizer:tap];
+    
+    // 添加背景图
+    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    [self addSubview:bgImageView];
+    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).width.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+    self.bgImageView = bgImageView;
 }
 
-- (void)touchPlayButton:(ZXXPlayerPlayControlButton *)button
+- (void)touchPlayButton:(UITapGestureRecognizer *)tap
 {
-    button.selected = !button.isSelected;
-    self.isPlay = button.isSelected;
+    self.selected = !self.isSelected;
+    self.isPlay = self.isSelected;
     if ([self.delegate respondsToSelector:@selector(touchPlayButton:)]) {
-        [self.delegate buttonTouchWithButton:button];
+        [self.delegate buttonTouchWithButton:self];
     }
 }
 
@@ -63,20 +85,48 @@
 // 设置播放按钮
 - (void)setPlayIcon:(UIImage *)playIcon
 {
-    _playIcon = playIcon;
-    [self setImage:_playIcon forState:UIControlStateNormal];
+    [self setImage:playIcon withControl:UIControlStateNormal];
 }
-
 // 设置暂停按钮
 - (void)setPauseIcon:(UIImage *)pauseIcon
 {
-    _pauseIcon = pauseIcon;
-    [self setImage:_pauseIcon forState:UIControlStateSelected];
+    [self setImage:pauseIcon withControl:UIControlStateSelected];
 }
 
-- (BOOL)isPlay
+
+/**
+ * 设置不同状态下的图片
+
+ @param image 图片
+ @param state 状态
+ */
+- (void)setImage:(UIImage *)image withControl:(UIControlState)state
 {
-    return self.isSelected;
+    if (state == UIControlStateNormal) {
+        _playIcon = image;
+    }
+    if (state == UIControlStateSelected) {
+        _pauseIcon = image;
+    }
+    // 更换图片
+    if (self.isSelected) {
+        self.bgImageView.image = self.pauseIcon;
+    }
+    else{
+        self.bgImageView.image = self.playIcon;
+    }
+
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    _selected = selected;
+    if (selected) {
+        self.bgImageView.image = self.pauseIcon;
+    }
+    else{
+        self.bgImageView.image = self.playIcon;
+    }
 }
 
 /*

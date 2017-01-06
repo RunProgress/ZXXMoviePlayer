@@ -106,7 +106,7 @@
     [self.currentPlayerItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil]; // 监听 当前的播放缓冲 可以再次播放
     
     [_moviePlayer replaceCurrentItemWithPlayerItem:self.currentPlayerItem];
-    [self videoPlay];
+    [_moviePlayer play];
 }
 
 - (void)connectInterFaceControlsListToPlayerWithControlList:(NSDictionary *)playerControls
@@ -291,7 +291,7 @@
     }
     
     isBuffer = YES;
-    [self videoPause];
+    [_moviePlayer pause];
     _currentItemStatus = ZXXPlayItemLoadingBuffer;
     
     
