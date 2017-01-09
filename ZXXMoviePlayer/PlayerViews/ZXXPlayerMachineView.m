@@ -382,11 +382,22 @@
 - (void)setCurrentPlayTimeScaleToProgress
 {
     id playTimeProgress = [self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress];
+    id bufferProgress = [self.playControlDict valueForKey:kZXXPlayerControlBufferProgress];
     if (playTimeProgress) {
         CGFloat scale = self.currentPlayTime / self.currentItemTotalDuration;
         if ([playTimeProgress respondsToSelector:@selector(changeProgress:)]) {
             [playTimeProgress performSelector:@selector(changeProgress:) withObject:[NSNumber numberWithFloat:scale]];
         }
+    }
+    
+    if (bufferProgress) {
+        if ([bufferProgress respondsToSelector:@selector(changeBufferProgress:)]) {
+            NSTimeInterval bufferTime = [self availableDuration];
+            CGFloat totalPlayDuration = CMTimeGetSeconds(self.currentPlayerItem.duration);
+            CGFloat bufferProgressScale = bufferTime / totalPlayDuration;
+            [bufferProgress performSelector:@selector(changeBufferProgress:) withObject:[NSNumber numberWithFloat:bufferProgressScale]];
+        }
+
     }
 }
 

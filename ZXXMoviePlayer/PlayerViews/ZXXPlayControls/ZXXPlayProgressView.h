@@ -21,9 +21,9 @@
 
 
 /**
- * 实现此方法,用于播放器改变进度条的当前播放比
+ * 在需要获取播放进度的控件里需要实现该方法 用于播放器更改控件的显示进度
 
- @param progress 进度
+ @param progress 进度 播放器赋值,用于更改控件显示的播放进度
  */
 - (void)changeProgress:(NSNumber *)progress;
 

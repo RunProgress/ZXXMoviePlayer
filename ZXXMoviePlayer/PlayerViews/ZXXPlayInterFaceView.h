@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ZXXPlayerPlayControlButton.h"
 #import "ZXXPlayProgressView.h"
+#import "ZXXBufferProgressView.h"
 
 @interface ZXXPlayInterFaceView : UIView
 
 @property (nonatomic, strong)ZXXPlayerPlayControlButton *playButton;
 @property (nonatomic, strong)ZXXPlayProgressView *playProgress;
+@property (nonatomic, strong)ZXXBufferProgressView *bufferProgress;
 
 @end

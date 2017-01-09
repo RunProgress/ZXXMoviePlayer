@@ -49,7 +49,7 @@
     self.maximumValue = 1.0;
     self.minimumValue = 0;
     
-    self.maximumTrackTintColor = [UIColor grayColor];
+    self.maximumTrackTintColor = [UIColor clearColor];
     self.tintColor = [UIColor cyanColor];
     self.thumbTintColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:0.6];
     

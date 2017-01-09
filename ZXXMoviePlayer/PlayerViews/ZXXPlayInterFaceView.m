@@ -49,6 +49,16 @@
         make.right.equalTo(self).with.offset(0);
     }];
     
+    // 缓冲进度条
+    _bufferProgress = [[ZXXBufferProgressView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width - 40, 20)];
+    [bottomView addSubview:_bufferProgress];
+    [_bufferProgress mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(3);
+        make.left.equalTo(bottomView).with.offset(20);
+        make.right.equalTo(bottomView).with.offset(-20);
+        make.centerY.equalTo(bottomView).with.offset(1);
+    }];
+    
     // 进度条
     _playProgress = [[ZXXPlayProgressView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width - 40, 20)];
     [bottomView addSubview:_playProgress];
@@ -56,8 +66,10 @@
         make.height.mas_equalTo(20);
         make.left.equalTo(bottomView).with.offset(20);
         make.right.equalTo(bottomView).with.offset(-20);
-        make.top.equalTo(bottomView);
+        make.centerY.equalTo(bottomView);
     }];
+    
+
 }
 
 /*
