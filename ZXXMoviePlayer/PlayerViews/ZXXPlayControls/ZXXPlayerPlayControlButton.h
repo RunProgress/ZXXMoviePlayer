@@ -6,6 +6,12 @@
 //  Copyright © 2017年 Zhangx. All rights reserved.
 //
 
+/**
+ 如果要使用自定义控件和ZXXPlayerMachineView关联在一起, 需要实现以下:
+ 1. 需要含有 isPlay 属性,player对isPlay属性进行监听,根据播放按钮的 isPlay 来改变自身的播放状态.
+ 2. 需要含有 changeButtonStatusWithIsPlayIcon: 方法, player通过对该方法的调用实现根据播放的一些情况
+ 对按钮状态的改变. 该方法通过传入 @"0"、@"1" 通过属性的方法来代替 NO YES.
+ */
 #import <UIKit/UIKit.h>
 @class ZXXPlayerPlayControlButton;
 

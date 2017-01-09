@@ -8,6 +8,7 @@
 
 #import "ZXXPlayerMachineView.h"
 #import "ZXXPlayerPlayControlButton.h"
+#import "ZXXPlayProgressView.h"
 #import <Masonry.h>
 
 @interface ZXXPlayerMachineView ()
@@ -16,10 +17,8 @@
 @property (nonatomic, weak)AVPlayerLayer *moviePlayerLayer; // 播放器Layer
 @property (nonatomic, strong)AVPlayerItem *currentPlayerItem; // 播放的Item
 @property (nonatomic, strong)NSTimer *playeTime; // 播放监听的定时器
-/**
- 控制播放器的 播放控件列表
- */
-@property (nonatomic, strong)NSDictionary *playControlDict;
+@property (nonatomic, strong)NSDictionary *playControlDict; // 控制播放器的 播放控件列表
+@property (nonatomic, strong)NSTimer *timer;
 @end
 
 @implementation ZXXPlayerMachineView
@@ -55,6 +54,18 @@
 // --- create subViews ---
 - (void)setupPalyerViewAndLayer
 {
+    [self setupPLayer]; // 初始化播放器
+    [self setupParams]; // 初始化参数
+    
+    // 注册 监听一个项目是否播放完毕
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentPlayItemPlayToEndTime) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+}
+
+/**
+ * 初始化播放器
+ */
+- (void)setupPLayer
+{
     AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:nil];
     self.moviePlayer = player;
     
@@ -63,29 +74,43 @@
     playerLayer.frame = self.bounds;
     [self.layer addSublayer:playerLayer];
     self.moviePlayerLayer = playerLayer;
-    
-    // 注册 监听一个项目是否播放完毕
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentPlayItemPlayToEndTime) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
 }
 
+/**
+ * 初始化参数
+ */
+- (void)setupParams
+{
+    // 默认循环播放
+    self.isPlayCircularly = YES;
+}
 
 /**
- 设置播放的URL
-
- @param sourceURL 播放的URL
+ * 关联播放控件和播放器
  */
-- (void)setSourceURL:(NSURL *)sourceURL
+- (void)connectInterFaceControlsListToPlayerWithControlList:(NSDictionary *)playerControls
 {
-    if (sourceURL) {
-        _sourceURL = sourceURL;
-        self.currentPlayerItem = [AVPlayerItem playerItemWithURL:_sourceURL];
-        self.currentItemStatus = ZXXPlayItemUnLoad;
+    self.playControlDict = playerControls;
+    [self registerPlayControl];
+}
+
+/**
+ * 注册播放控件
+ */
+- (void)registerPlayControl
+{
+    if ([self.playControlDict valueForKey:kZXXPlayerControlPlayButton]) {
+        id playButton = [self.playControlDict valueForKey:kZXXPlayerControlPlayButton];
+        [playButton addObserver:self forKeyPath:@"isPlay" options:NSKeyValueObservingOptionNew context:nil];
+    }
+    if ([self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress]) {
+        id playProgress = [self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress];
+        [playProgress addObserver:self forKeyPath:@"seekProgress" options:NSKeyValueObservingOptionNew context:nil];
     }
 }
 
-
 /**
- 准备开始播放
+ * 准备开始播放
  */
 - (void)readyToPlay
 {
@@ -107,22 +132,29 @@
     
     [_moviePlayer replaceCurrentItemWithPlayerItem:self.currentPlayerItem];
     [_moviePlayer play];
+    
+    // 设置定时器
+    if (_timer) {
+        [_timer invalidate];
+    }
+    [self.timer setFireDate:[NSDate distantPast]];
 }
 
-- (void)connectInterFaceControlsListToPlayerWithControlList:(NSDictionary *)playerControls
+#pragma mark --- 控制播放的方法 ---
+/**
+ * 设置播放的URL
+ 
+ @param sourceURL 播放的URL
+ */
+- (void)setSourceURL:(NSURL *)sourceURL
 {
-    self.playControlDict = playerControls;
-    [self registerPlayControl];
-}
-
-- (void)registerPlayControl
-{
-    if ([self.playControlDict valueForKey:kZXXPlayerControlPlayButton]) {
-        id playButton = [self.playControlDict valueForKey:kZXXPlayerControlPlayButton];
-        [playButton addObserver:self forKeyPath:@"isPlay" options:NSKeyValueObservingOptionNew context:nil];
+    if (sourceURL) {
+        _sourceURL = sourceURL;
+        self.currentPlayerItem = [AVPlayerItem playerItemWithURL:_sourceURL];
+        self.currentItemStatus = ZXXPlayItemUnLoad;
     }
 }
-#pragma mark --- 控制播放的方法 ---
+
 /**
  * 播放
  */
@@ -134,12 +166,18 @@
     }
 }
 
+/**
+ * 按钮控制播放
+ */
 - (void)buttonControlToPlay
 {
     if (_currentItemStatus == ZXXPlayItemUnLoad) {
         [self readyToPlay];
     }
     else{
+        if (self.isPlayCircularly && _currentItemStatus == ZXXPlayItemEndPlay) {
+            [self playSpecificTime:0];
+        }
         [_moviePlayer play];
     }
 }
@@ -168,7 +206,21 @@
     }];
 }
 
-// -------
+/**
+ * 播放指定时间比例的视频
+
+ @param playScale 比例 (0 ~ 1)
+ */
+- (void)playSpecificScale:(CGFloat)playScale
+{
+    playScale = playScale > 1.0 ? 1.0 : playScale;
+    playScale = playScale < 0 ? 0 : playScale;
+    NSTimeInterval totalTime = self.currentItemTotalDuration;
+    NSTimeInterval playTime = totalTime * playScale;
+    [self playSpecificTime:playTime];
+}
+
+// ----------------------------------------
 
 /*
  监听
@@ -204,8 +256,8 @@
         
     }
     
+    // 播放控制按钮
     if ([object isEqual:[self.playControlDict valueForKey:kZXXPlayerControlPlayButton]]) {
-        NSLog(@"变了 ---");
         if (self) {
             ZXXPlayerPlayControlButton *button = [self.playControlDict valueForKey:kZXXPlayerControlPlayButton];
             if (button.isPlay) {
@@ -214,6 +266,13 @@
             else{
                 [_moviePlayer pause];
             }
+        }
+    }
+    // 播放显示进度条
+    if ([object isEqual:[self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress] ]) {
+        if (self) {
+            ZXXPlayProgressView *playProgress = [self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress];
+            [self playSpecificScale:playProgress.seekProgress];
         }
     }
 }
@@ -256,6 +315,15 @@
     return 0;
 }
 
+- (NSTimer *)timer
+{
+    if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(setCurrentPlayTimeScaleToProgress) userInfo:nil repeats:YES];
+        [_timer setFireDate:[NSDate distantFuture]];
+    }
+    return _timer;
+}
+
 #pragma mark --- 获取 播放参数 ---
 /**
  获取缓存到达的时间
@@ -293,8 +361,7 @@
     isBuffer = YES;
     [_moviePlayer pause];
     _currentItemStatus = ZXXPlayItemLoadingBuffer;
-    
-    
+
     // 1s后重新检查 buffer的情况
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         isBuffer = YES;
@@ -312,11 +379,23 @@
     });
 }
 
+- (void)setCurrentPlayTimeScaleToProgress
+{
+    id playTimeProgress = [self.playControlDict valueForKey:kZXXPlayerControlPlayTimeProgress];
+    if (playTimeProgress) {
+        CGFloat scale = self.currentPlayTime / self.currentItemTotalDuration;
+        if ([playTimeProgress respondsToSelector:@selector(changeProgress:)]) {
+            [playTimeProgress performSelector:@selector(changeProgress:) withObject:[NSNumber numberWithFloat:scale]];
+        }
+    }
+}
+
 /**
  当前的播放项目 播放完毕
  */
 - (void)currentPlayItemPlayToEndTime
 {
+    NSLog(@"播放完毕");
     _currentItemStatus = ZXXPlayItemEndPlay;
     [self videoPause];
 }

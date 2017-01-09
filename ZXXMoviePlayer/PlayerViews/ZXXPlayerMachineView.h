@@ -24,22 +24,27 @@ typedef NS_ENUM(NSUInteger, ZXXPlayeItemStatus) {
 
 
 @interface ZXXPlayerMachineView : UIView
-
 /**
- 播放地址的URL
+ * 播放地址的URL
  */
 @property (nonatomic, strong)NSURL *sourceURL;
-// 当前的播放状态
+/**
+ * 当前的播放状态
+ */
 @property (nonatomic, assign)ZXXPlayeItemStatus currentItemStatus;
+/**
+ * 是否循环播放(当播放结束时,再次点击播放按钮重新开始播放,default is YES)
+ */
+@property (nonatomic, assign)BOOL isPlayCircularly;
+
 
 @property (nonatomic, assign, readonly)CGFloat bufferProgress; // 缓冲的进度 (0 - 1)
 @property (nonatomic, assign, readonly)CGFloat playProgress; // 播放进度 (0 - 1)
 @property (nonatomic, assign, readonly)NSTimeInterval currentPlayTime; // 当前播放的时间
 @property (nonatomic, assign, readonly)NSTimeInterval currentItemTotalDuration; // 当前播放项的时长
 
-
 /**
- 讲播放界面的控制播放的控件同播放器关联起来
+ 将播放界面的控制播放的控件同播放器关联起来
 
  @param playerControls 控制播放的播放器的列表,每个control的Item采用kv (Key:播放控件类型, Value:播放控件实例)
  */

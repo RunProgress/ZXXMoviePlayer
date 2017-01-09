@@ -17,6 +17,7 @@
 		3D705F651E1CCEF20076D738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D705F631E1CCEF20076D738 /* LaunchScreen.storyboard */; };
 		3D705F701E1CCEF20076D738 /* ZXXMoviePlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F6F1E1CCEF20076D738 /* ZXXMoviePlayerTests.m */; };
 		3D705F7B1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F7A1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m */; };
+		3D7B42551E1F8DBF00E5A177 /* ZXXPlayProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7B42541E1F8DBF00E5A177 /* ZXXPlayProgressView.m */; };
 		3DCF4C481E1CD183003659EC /* ZXXPlayerMachineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */; };
 		3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */; };
 		4A81F5D8832DEC63739F9B1D /* libPods-ZXXMoviePlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */; };
@@ -62,6 +63,8 @@
 		3D705F761E1CCEF20076D738 /* ZXXMoviePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXXMoviePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D705F7A1E1CCEF20076D738 /* ZXXMoviePlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXXMoviePlayerUITests.m; sourceTree = "<group>"; };
 		3D705F7C1E1CCEF20076D738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7B42531E1F8DBF00E5A177 /* ZXXPlayProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayProgressView.h; sourceTree = "<group>"; };
+		3D7B42541E1F8DBF00E5A177 /* ZXXPlayProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayProgressView.m; sourceTree = "<group>"; };
 		3DCF4C461E1CD183003659EC /* ZXXPlayerMachineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayerMachineView.h; sourceTree = "<group>"; };
 		3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayerMachineView.m; sourceTree = "<group>"; };
 		3DCF4C491E1D0801003659EC /* ZXXPlayInterFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayInterFaceView.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				3D35686F1E1DE52B008411B6 /* ZXXControlKey.h */,
 				3D3568701E1DE95B008411B6 /* ZXXPlayerPlayControlButton.h */,
 				3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */,
+				3D7B42531E1F8DBF00E5A177 /* ZXXPlayProgressView.h */,
+				3D7B42541E1F8DBF00E5A177 /* ZXXPlayProgressView.m */,
 			);
 			path = ZXXPlayControls;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				3D3568721E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m in Sources */,
 				3D705F571E1CCEF20076D738 /* main.m in Sources */,
 				3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */,
+				3D7B42551E1F8DBF00E5A177 /* ZXXPlayProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
