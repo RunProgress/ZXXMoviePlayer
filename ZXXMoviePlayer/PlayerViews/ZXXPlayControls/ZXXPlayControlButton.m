@@ -6,10 +6,10 @@
 //  Copyright © 2017年 Zhangx. All rights reserved.
 //
 
-#import "ZXXPlayerPlayControlButton.h"
+#import "ZXXPlayControlButton.h"
 #import <Masonry.h>
 
-@interface ZXXPlayerPlayControlButton ()
+@interface ZXXPlayControlButton ()
 
 @property (nonatomic, assign, readwrite)BOOL isPlay;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ZXXPlayerPlayControlButton
+@implementation ZXXPlayControlButton
 
 // --- initalize ---
 - (instancetype)init

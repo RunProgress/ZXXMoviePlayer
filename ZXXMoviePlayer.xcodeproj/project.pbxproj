@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36DF1B090C0B17DEE38E8E64 /* libPods-ZXXMoviePlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 061EEDE39FE91E861FE4E5F2 /* libPods-ZXXMoviePlayerUITests.a */; };
-		3D3568721E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */; };
+		3D3568721E1DE95B008411B6 /* ZXXPlayControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3568711E1DE95B008411B6 /* ZXXPlayControlButton.m */; };
 		3D705F571E1CCEF20076D738 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F561E1CCEF20076D738 /* main.m */; };
 		3D705F5A1E1CCEF20076D738 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F591E1CCEF20076D738 /* AppDelegate.m */; };
 		3D705F5D1E1CCEF20076D738 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D705F5C1E1CCEF20076D738 /* ViewController.m */; };
@@ -46,8 +46,8 @@
 		061EEDE39FE91E861FE4E5F2 /* libPods-ZXXMoviePlayerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D09C49D1F0E6BB60FFFC7D0 /* Pods-ZXXMoviePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayer/Pods-ZXXMoviePlayer.release.xcconfig"; sourceTree = "<group>"; };
 		3D35686F1E1DE52B008411B6 /* ZXXControlKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXXControlKey.h; sourceTree = "<group>"; };
-		3D3568701E1DE95B008411B6 /* ZXXPlayerPlayControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayerPlayControlButton.h; sourceTree = "<group>"; };
-		3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayerPlayControlButton.m; sourceTree = "<group>"; };
+		3D3568701E1DE95B008411B6 /* ZXXPlayControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayControlButton.h; sourceTree = "<group>"; };
+		3D3568711E1DE95B008411B6 /* ZXXPlayControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayControlButton.m; sourceTree = "<group>"; };
 		3D705F521E1CCEF20076D738 /* ZXXMoviePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXXMoviePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D705F561E1CCEF20076D738 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D705F581E1CCEF20076D738 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				3D35686F1E1DE52B008411B6 /* ZXXControlKey.h */,
-				3D3568701E1DE95B008411B6 /* ZXXPlayerPlayControlButton.h */,
-				3D3568711E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m */,
+				3D3568701E1DE95B008411B6 /* ZXXPlayControlButton.h */,
+				3D3568711E1DE95B008411B6 /* ZXXPlayControlButton.m */,
 				3D7B42531E1F8DBF00E5A177 /* ZXXPlayProgressView.h */,
 				3D7B42541E1F8DBF00E5A177 /* ZXXPlayProgressView.m */,
 				3DEC523C1E2370210089101A /* ZXXBufferProgressView.h */,
@@ -509,7 +509,7 @@
 				3DCF4C481E1CD183003659EC /* ZXXPlayerMachineView.m in Sources */,
 				3D705F5D1E1CCEF20076D738 /* ViewController.m in Sources */,
 				3D705F5A1E1CCEF20076D738 /* AppDelegate.m in Sources */,
-				3D3568721E1DE95B008411B6 /* ZXXPlayerPlayControlButton.m in Sources */,
+				3D3568721E1DE95B008411B6 /* ZXXPlayControlButton.m in Sources */,
 				3D705F571E1CCEF20076D738 /* main.m in Sources */,
 				3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */,
 				3DEC523E1E2370210089101A /* ZXXBufferProgressView.m in Sources */,

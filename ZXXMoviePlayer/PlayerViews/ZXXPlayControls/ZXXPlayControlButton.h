@@ -13,11 +13,11 @@
  对按钮状态的改变. 该方法通过传入 @"0"、@"1" 通过属性的方法来代替 NO YES.
  */
 #import <UIKit/UIKit.h>
-@class ZXXPlayerPlayControlButton;
+@class ZXXPlayControlButton;
 
 @protocol ZXXPlayerPlayControlButtonDelegate <NSObject>
 
-- (void)buttonTouchWithButton:(ZXXPlayerPlayControlButton *)playButton;
+- (void)buttonTouchWithButton:(ZXXPlayControlButton *)playButton;
 
 @end
 
@@ -25,7 +25,7 @@
 /**
  * 控制播放器 开始暂停的按钮
  */
-@interface ZXXPlayerPlayControlButton : UIView
+@interface ZXXPlayControlButton : UIView
 
 /**
  * 播放按钮
