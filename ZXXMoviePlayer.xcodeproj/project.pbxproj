@@ -21,6 +21,7 @@
 		3DCF4C481E1CD183003659EC /* ZXXPlayerMachineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C471E1CD183003659EC /* ZXXPlayerMachineView.m */; };
 		3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */; };
 		3DEC523E1E2370210089101A /* ZXXBufferProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC523D1E2370210089101A /* ZXXBufferProgressView.m */; };
+		3DEC52411E238A1E0089101A /* ZXXPlayLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC52401E238A1E0089101A /* ZXXPlayLoading.m */; };
 		4A81F5D8832DEC63739F9B1D /* libPods-ZXXMoviePlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */; };
 		DD754F4F36DD9530019B6B6F /* libPods-ZXXMoviePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C6922B3FEC83F732209A6C /* libPods-ZXXMoviePlayer.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		3DCF4C4A1E1D0801003659EC /* ZXXPlayInterFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayInterFaceView.m; sourceTree = "<group>"; };
 		3DEC523C1E2370210089101A /* ZXXBufferProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXBufferProgressView.h; sourceTree = "<group>"; };
 		3DEC523D1E2370210089101A /* ZXXBufferProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXBufferProgressView.m; sourceTree = "<group>"; };
+		3DEC523F1E238A1E0089101A /* ZXXPlayLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXXPlayLoading.h; sourceTree = "<group>"; };
+		3DEC52401E238A1E0089101A /* ZXXPlayLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXXPlayLoading.m; sourceTree = "<group>"; };
 		6EF3AF1AA77977FE4278401A /* libPods-ZXXMoviePlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C6922B3FEC83F732209A6C /* libPods-ZXXMoviePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXXMoviePlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6481E39DCA68696759FD /* Pods-ZXXMoviePlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXXMoviePlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXXMoviePlayerTests/Pods-ZXXMoviePlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				3D7B42541E1F8DBF00E5A177 /* ZXXPlayProgressView.m */,
 				3DEC523C1E2370210089101A /* ZXXBufferProgressView.h */,
 				3DEC523D1E2370210089101A /* ZXXBufferProgressView.m */,
+				3DEC523F1E238A1E0089101A /* ZXXPlayLoading.h */,
+				3DEC52401E238A1E0089101A /* ZXXPlayLoading.m */,
 			);
 			path = ZXXPlayControls;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				3D3568721E1DE95B008411B6 /* ZXXPlayControlButton.m in Sources */,
 				3D705F571E1CCEF20076D738 /* main.m in Sources */,
 				3DCF4C4B1E1D0801003659EC /* ZXXPlayInterFaceView.m in Sources */,
+				3DEC52411E238A1E0089101A /* ZXXPlayLoading.m in Sources */,
 				3DEC523E1E2370210089101A /* ZXXBufferProgressView.m in Sources */,
 				3D7B42551E1F8DBF00E5A177 /* ZXXPlayProgressView.m in Sources */,
 			);

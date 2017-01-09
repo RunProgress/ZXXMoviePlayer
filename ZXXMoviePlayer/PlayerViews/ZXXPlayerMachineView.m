@@ -243,9 +243,9 @@
             }
         }
         if ([keyPath isEqualToString:@"loadTimeRanges"]) {
-            NSTimeInterval bufferTime = [self availableDuration];
-            CGFloat totalPlayDuration = CMTimeGetSeconds(self.currentPlayerItem.duration);
-            _bufferProgress = bufferTime / totalPlayDuration;
+//            NSTimeInterval bufferTime = [self availableDuration];
+//            CGFloat totalPlayDuration = CMTimeGetSeconds(self.currentPlayerItem.duration);
+//            _bufferProgress = bufferTime / totalPlayDuration;
         }
         if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
             [self bufferWaitTimeWhenBufferEmpty];
