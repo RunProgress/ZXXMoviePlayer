@@ -29,7 +29,7 @@
 - (void)setupSubViews
 {
     // 播放按钮
-    _playButton = [[ZXXPlayerPlayControlButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    _playButton = [[ZXXPlayControlButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     [_playButton setupButton];
     _playButton.playIcon = [UIImage imageNamed:@"player_play.jpg"];
     _playButton.pauseIcon = [UIImage imageNamed:@"player_pause.jpg"];

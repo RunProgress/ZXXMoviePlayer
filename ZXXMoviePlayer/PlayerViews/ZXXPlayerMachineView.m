@@ -7,7 +7,7 @@
 //
 
 #import "ZXXPlayerMachineView.h"
-#import "ZXXPlayerPlayControlButton.h"
+#import "ZXXPlayControlButton.h"
 #import "ZXXPlayProgressView.h"
 #import <Masonry.h>
 
@@ -259,7 +259,7 @@
     // 播放控制按钮
     if ([object isEqual:[self.playControlDict valueForKey:kZXXPlayerControlPlayButton]]) {
         if (self) {
-            ZXXPlayerPlayControlButton *button = [self.playControlDict valueForKey:kZXXPlayerControlPlayButton];
+            ZXXPlayControlButton *button = [self.playControlDict valueForKey:kZXXPlayerControlPlayButton];
             if (button.isPlay) {
                 [self buttonControlToPlay];
             }
